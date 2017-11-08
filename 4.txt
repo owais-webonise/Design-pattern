@@ -1,0 +1,34 @@
+Strategy Pattern - Behavior
+In Strategy pattern, a class behavior or its algorithm can be changed at run time.
+
+Create Interface for sorting 
+Interface Sorting{
+   sorting(List Performance)
+}
+
+Different classes for the iterface
+Bubble_sort implements Sorting{
+  sorting(List Performance)
+}
+
+Quick_sort implements Sorting{
+	sorting(List Performance)
+}
+
+Merge_sort implements Sorting{
+	sorting(List Performance)
+}
+
+Insertion_sort implemets Sorting{
+	sorting(List Performance)
+}
+
+Context class for changing behavior
+
+Context{
+Create sorting object
+Accept user choice and return object.sorting(List Performance) for user's choice
+}
+
+
+

@@ -1,0 +1,85 @@
+Abstract Design Pattern(ADP) - Creational Pattern
+
+
+This will be ADP because in Abstract Factory pattern an interface is responsible for creating a factory of related objects, without explicitly specifying their classes.
+
+Chassis interface having a function which has different definition for its implemented classes
+Chassis
+Chassis Interface{
+	void chassis_func();
+}
+
+
+TowerChassis is a class,which has a definition for chassis_func()
+TowerChassis implements Chassis
+{
+	 chassis_func()
+		{
+		print "In Tower Chassis"
+		}
+}
+
+DesktopChassis is a class,which has a definition for chassis_func()
+DesktopChassis implements Chassis
+{
+	chassis_func()
+		{
+		print "In Desktop Chassis"
+		}
+}
+
+
+Cabinet interface having a function which has different definition for its implemented classes
+Cabinet Interface{
+	void cabinet_func();
+}
+
+
+TowerCabinet
+TowerCabinet implements Cabinet
+{
+	cabinet_func()
+		{
+		print "In Tower Cabinet"
+		}
+}
+
+DesktopCabinet
+DesktopChassis implements Cabinet
+{
+	cabinet_func()
+		{
+		print "In Desktop Cabinet"
+		}
+}
+
+Create an Abstract class to get factories for Chassis and Cabinet Objects.
+AbstractFactory
+AbstractFactory {
+   getChassis(String chassis);
+   getCabinet(String cabinet) ;
+}
+
+Create Factory classes extending AbstractFactory to generate object
+ChassisFactory extends AbstractFactory{
+
+getChassis(String chassisType){
+if (chassisType == TowerChassis)
+	return TowerChassis;
+if (chassisType == DesktopChassis)
+	return DesktopChassis;
+}
+}
+
+CabinetFactory
+CabinetFactory extends AbstractFactory{
+
+getCabinet(String cabinetType){
+if (cabinetType == TowerCabinet)
+	return TowerCabinet;
+if (cabinetType == DesktopCabinet)
+	return DesktopCabinet;
+}
+}
+
+

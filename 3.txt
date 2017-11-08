@@ -1,0 +1,12 @@
+Decorator Pattern - Structural Pattern
+Decorator pattern allows to add new functionality an existing object without altering its structure. This pattern creates a decorator class which wraps the original class and provides additional functionality keeping class methods signature intact.
+
+Example:-
+ComputerEquipment has 2 classes cabinet and desktop. I want to add mouse to it.  
+
+Mouse implements ComputerEquipment{
+ 	Add mouse to ComputerEquipment
+}
+
+
+

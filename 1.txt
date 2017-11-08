@@ -1,0 +1,57 @@
+Composite Pattern - structural pattern
+Composite pattern is used where we need to treat a group of objects in similar way as a single object. Here we have to treat netPrice and PowerConsumption as a single obejct which is present in every class. So we have taken interface as chassis.
+
+Create PC Interface having common attributes for all the entities
+PC Interface{
+ cabinet, desktop,mouse attributes
+}
+
+Cabinet is an interface which is implemented from PC
+Cabinet Interface implements PC{
+ chassis
+}
+
+Chassis is an interface which is implemented from Cabinet and have attributes common to all inherited classes
+Chassis Interface implements chassis{
+ netPrice();
+ powerConsumption();
+}
+
+bus is a class which is implemented from Chassis having attributes netPrice and powerConsumption and its definitions 
+class bus implements Chassis{
+  netPrice()
+	{
+		netPrice=10
+	}
+   powerConsumption()
+	{
+		powerConsumption=12
+	}
+
+} 
+
+
+class power_supply implements Chassis{
+  netPrice()
+	{
+		netPrice=17
+	}
+   powerConsumption()
+	{
+		powerConsumption=11
+	}
+
+} 
+
+
+main()
+{
+create object of bus and call netPrice() and powerConsumption()
+create object of power_supply and call netPrice() and powerConsumption()
+}
+
+
+
+
+
+
